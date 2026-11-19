@@ -107,8 +107,8 @@ if(yes&&(!count||Number(count)<1||Number(count)>30)){alert('Indica cuántas pers
 const phone=cleanPhone(data.telefono);
 if(phone.length<10){alert('El número de WhatsApp de confirmación no es válido.');return}
 const message=yes
-?`Hola, confirmo asistencia a la fiesta de ${data.nombres}.\nNombre: ${name}\nNúmero de personas: ${count}`
-:`Hola, gracias por la invitación a la fiesta de ${data.nombres}.\nMi nombre es: ${name}.\nLamentablemente no podré asistir.`;
+?`Hola, confirmo asistencia a la fiesta de XV Años de ${data.nombres}.\nNombre: ${name}\nNúmero de personas: ${count}`
+:`Hola, gracias por la invitación a la fiesta de XV Años de ${data.nombres}.\nMi nombre es: ${name}.\nLamentablemente no podré asistir.`;
 location.href='https://wa.me/'+phone+'?text='+encodeURIComponent(message);
 }
 }
