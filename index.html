@@ -151,7 +151,7 @@ const phone=cleanPhone($('phone').value),name=$('names').value.trim();
 if(phone.length<10){alert('Escribe un teléfono de WhatsApp válido, incluyendo el código de país.');$('phone').focus();return}
 if(!name){alert('Escribe el nombre de la quinceañera.');$('names').focus();return}
 const data=new URLSearchParams({modo:'invitado',tel:phone,nombre:name,color:$('color').value,mensaje:$('message').value.trim()||DEFAULT_MESSAGE});
-const url=location.href.split('?')[0].split('#')[0]+'?'+data.toString();
+const url='https://confirmaciones-rho.vercel.app/?'+data.toString();
 $('generated').value=url;$('linkbox').classList.add('show');$('status').textContent='Enlace generado. Haz una prueba antes de compartirlo.';
 };
 $('copy').onclick=async()=>{
